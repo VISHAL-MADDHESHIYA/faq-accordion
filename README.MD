@@ -3,6 +3,10 @@
 **A modern, fully responsive, and accessible FAQ component built with pure HTML, CSS, and JavaScript.**
 
 ---
+## 🔗 Project Links
+
+- **Live Demo:** [https://vishal-maddheshiya.github.io/faq-accordion/](https://vishal-maddheshiya.github.io/faq-accordion/)
+- **GitHub Repository:** [https://github.com/VISHAL-MADDHESHIYA/faq-accordion](https://github.com/VISHAL-MADDHESHIYA/faq-accordion)
 
 ## 📖 Overview
 
