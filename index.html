@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ Accordion - Advanced Vanilla Edition</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="faq-container">
+    <header class="faq-header">
+      <h1>Frequently Asked Questions</h1>
+      <p>Everything you need to know about the product, coding, and billing.</p>
+      
+      <!-- Category Filter Tabs -->
+      <div class="category-tabs">
+        <button class="tab-btn active" data-category="all">All</button>
+        <button class="tab-btn" data-category="general">General</button>
+        <button class="tab-btn" data-category="tech">Technical</button>
+        <button class="tab-btn" data-category="billing">Billing</button>
+      </div>
+
+      <!-- Live Search Box -->
+      <div class="search-box">
+        <input type="text" id="faqSearch" placeholder="Search questions..." aria-label="Search FAQs">
+      </div>
+    </header>
+
+    <!-- Accordion Wrapper -->
+    <div class="accordion" id="faqAccordion">
+
+      <!-- Item 1 -->
+      <div class="faq-item" data-category="general">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq1" id="q1">
+          <span>What is DOM manipulation in JavaScript?</span>
+          <span class="icon">+</span>
+        </button>
+        <div id="faq1" class="faq-answer" role="region">
+          <div class="faq-answer-content">
+            DOM manipulation allows JavaScript to dynamically alter HTML elements, attributes, and CSS styles in real-time.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="faq-item" data-category="general">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq2" id="q2">
+          <span>What does classList.toggle() do?</span>
+          <span class="icon">+</span>
+        </button>
+        <div id="faq2" class="faq-answer" role="region">
+          <div class="faq-answer-content">
+            The <code>classList.toggle()</code> method toggles a class name on an element. It adds it if missing, and removes it if present.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="faq-item" data-category="tech">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq3" id="q3">
+          <span>Why should a button be used for interactive FAQ questions?</span>
+          <span class="icon">+</span>
+        </button>
+        <div id="faq3" class="faq-answer" role="region">
+          <div class="faq-answer-content">
+            Using a <code>&lt;button&gt;</code> ensures native accessibility, allowing keyboard tab focus and Enter/Space triggers automatically.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="faq-item" data-category="tech">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq4" id="q4">
+          <span>What is event handling in JavaScript?</span>
+          <span class="icon">+</span>
+        </button>
+        <div id="faq4" class="faq-answer" role="region">
+          <div class="faq-answer-content">
+            Event handling executes a specific function when a browser event like a click or keypress is triggered.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="faq-item" data-category="billing">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq5" id="q5">
+          <span>How does the subscription billing work?</span>
+          <span class="icon">+</span>
+        </button>
+        <div id="faq5" class="faq-answer" role="region">
+          <div class="faq-answer-content">
+            Subscriptions are billed automatically on a recurring monthly or annual basis via our secure payment gateway.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="faq-item" data-category="billing">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq6" id="q6">
+          <span>Can I get a refund if I cancel early?</span>
+          <span class="icon">+</span>
+        </button>
+        <div id="faq6" class="faq-answer" role="region">
+          <div class="faq-answer-content">
+            Yes, we offer a prorated refund within the first 14 days of your initial subscription purchase.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 7 (New) -->
+      <div class="faq-item" data-category="tech">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq7" id="q7">
+          <span>What is the difference between let, const, and var?</span>
+          <span class="icon">+</span>
+        </button>
+        <div id="faq7" class="faq-answer" role="region">
+          <div class="faq-answer-content">
+            <code>var</code> is function-scoped and can be re-declared, while <code>let</code> and <code>const</code> are block-scoped. <code>const</code> cannot be reassigned after initialization.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 8 (New) -->
+      <div class="faq-item" data-category="tech">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq8" id="q8">
+          <span>How do CSS media queries work for responsiveness?</span>
+          <span class="icon">+</span>
+        </button>
+        <div id="faq8" class="faq-answer" role="region">
+          <div class="faq-answer-content">
+            Media queries apply specific CSS rules based on device characteristics like screen width, height, or orientation using the <code>@media</code> rule.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 9 (New) -->
+      <div class="faq-item" data-category="general">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq9" id="q9">
+          <span>What are semantic HTML tags and why use them?</span>
+          <span class="icon">+</span>
+        </button>
+        <div id="faq9" class="faq-answer" role="region">
+          <div class="faq-answer-content">
+            Semantic tags (like <code>&lt;header&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;footer&gt;</code>) clearly describe their meaning to both the browser and the developer, improving SEO and accessibility.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 10 (New) -->
+      <div class="faq-item" data-category="tech">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq10" id="q10">
+          <span>What is event bubbling in JavaScript?</span>
+          <span class="icon">+</span>
+        </button>
+        <div id="faq10" class="faq-answer" role="region">
+          <div class="faq-answer-content">
+            Event bubbling is a type of event propagation where an event triggered on a child element bubbles up and triggers handlers on its parent elements sequentially.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 11 (New) -->
+      <div class="faq-item" data-category="billing">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq11" id="q11">
+          <span>What payment methods do you accept?</span>
+          <span class="icon">+</span>
+        </button>
+        <div id="faq11" class="faq-answer" role="region">
+          <div class="faq-answer-content">
+            We accept all major credit/debit cards, PayPal, UPI, and net banking through our encrypted payment processors.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 12 (New) -->
+      <div class="faq-item" data-category="general">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq12" id="q12">
+          <span>How can I contact customer support?</span>
+          <span class="icon">+</span>
+        </button>
+        <div id="faq12" class="faq-answer" role="region">
+          <div class="faq-answer-content">
+            You can reach our 24/7 support team via the live chat widget on the bottom right or by emailing support@example.com.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 13 (New) -->
+      <div class="faq-item" data-category="tech">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq13" id="q13">
+          <span>How do you handle local storage in JavaScript?</span>
+          <span class="icon">+</span>
+        </button>
+        <div id="faq13" class="faq-answer" role="region">
+          <div class="faq-answer-content">
+            You can store and retrieve data locally in the browser using <code>localStorage.setItem(key, value)</code> and <code>localStorage.getItem(key)</code>.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 14 (New) -->
+      <div class="faq-item" data-category="general">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq14" id="q14">
+          <span>Are updates included in the subscription?</span>
+          <span class="icon">+</span>
+        </button>
+        <div id="faq14" class="faq-answer" role="region">
+          <div class="faq-answer-content">
+            Yes, all future software updates, security patches, and new feature rollouts are completely free for active subscribers.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 15 (New) -->
+      <div class="faq-item" data-category="tech">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq15" id="q15">
+          <span>What is the CSS Flexbox model used for?</span>
+          <span class="icon">+</span>
+        </button>
+        <div id="faq15" class="faq-answer" role="region">
+          <div class="faq-answer-content">
+            Flexbox is a one-dimensional layout method designed for arranging items in rows or columns, distributing space dynamically across containers.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 16 (New) -->
+      <div class="faq-item" data-category="billing">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq16" id="q16">
+          <span>Can I upgrade or downgrade my plan anytime?</span>
+          <span class="icon">+</span>
+        </button>
+        <div id="faq16" class="faq-answer" role="region">
+          <div class="faq-answer-content">
+            Yes, you can upgrade or downgrade your subscription tier from your account billing dashboard at any time without extra fees.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
